@@ -4,6 +4,8 @@ ruby '2.3.0'
 
 gem 'rails', '4.2.5'
 gem 'puma'
+# Using Postgres for Database
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -24,13 +26,5 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-
-  # Use SQLite in development
-  gem 'sqlite3'
-end
-
-group :production do
-  # Using Postgres for Database
-  gem 'pg'
 end
 
