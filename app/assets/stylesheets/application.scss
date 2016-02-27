@@ -14,33 +14,71 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 
 body {
   padding-top: 90px;
-  font-family: Lobster;
+  font-family: Raleway;
 }
 
 #title {
-  text-align: center;
 }
 
-.lead {
-  text-align: center;
+#intro {
   font-weight: bold;
 }
 
+.center {
+  text-align: center;
+}
+
+.free-estimates {
+  color: green;
+  font-size: 2em;
+}
+
 .galleria {
-  width: 900px;
+  width: 1900px;
   height: 532px;
   text-align: center;
 }
-@media screen and (min-width: 481px) {
-  .navbar-nav {
-    float: right;
-  }
+
+.navbar-brand {
+  display: flex;
+  font-family: Lobster;
+  font-size: 1.1em;
+  letter-spacing: 3px;
 }
 
-@media screen and (max-width: 480px) {
+.navbar .nav > li > a, .navbar .nav > li > a:first-letter,
+.navbar .nav > li.current-menu-item > a, 
+.navbar .nav > li.current-menu-ancestor > a {
+  font-size:      1.0em;
+}
+
+.navbar-nav > li > a, .navbar-brand {
+  padding-top:5px !important;
+  padding-bottom:0 !important;
+  height: 30px;
+  color: white !important;
+}
+
+.navbar {
+  min-height:30px !important;
+}
+
+.navbar-nav {
+  float: right;
+}
+
+#phone {
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-nav {
+    float: left;
+  }
 }
 
 

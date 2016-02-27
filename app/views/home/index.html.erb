@@ -1,6 +1,40 @@
-<%= image_tag("mip_logo.jpg", size: '900x200', class: 'img-responsive') %>
+<div class="container center">
+  <%= image_tag("mip_logo.jpg", size: '1120x200', class: 'img-responsive') %>
+</div>
 
-<div class="galleria img-responsive" id="gallery">
+<div id="intro" class="container center">
+  <h1>About Us</h1>
+  <p>From a wall to a mall, we do it all.</p>
+</div>
+
+<div id="services" class="container center">
+  <h1>Services</h1>
+  <p>( Residential - Commercial - Industrial )</p>
+  <div class='col-xs-12 col-md-6 col-lg-4'>
+      <h3>Interior Painting</h3>
+      <p>All interior surfaces including walls, accent, ceilings, and trim.</p>
+      <h3>Exterior Painting</h3>
+      <p>Siding, trim, decks (including powerwashing).</p>
+  </div>
+  <div class='col-xs-12 col-md-6 col-lg-4'>
+      <h3>Wall Cleaning</h3>
+      <p></p>
+      <h3>Wall Paper Removal</h3>
+      <p></p>
+      <h3>Wall and Ceiling Damage Repair</h3>
+      <p></p>
+  </div>
+  <div class='col-xs-12 col-md-6 col-lg-4'>
+      <h3>From a wall to a mall, we do it all.</h3>
+      <p>
+      <strong class='free-estimates'>Free Estimates!<br /></strong>
+      Brush, Roller, or Spraying options.<br />
+      Night painting available upon request.<br />
+      </p>
+  </div>
+</div>
+
+<div class="galleria img-responsive center" id="gallery">
   <%= image_tag("mip1.jpg", :title => "Painting a Ceiling", :alt => "Mark and Mike paint a ceiling") %>
   <%= image_tag("mip2.jpg", title: "MIP2") %>
 </div>

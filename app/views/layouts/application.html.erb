@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -18,16 +19,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Mark's Interior Painting 617-968-4000</a>
+      <a class="navbar-brand" href="#">Mark's Interior Painting</a>
     </div>
 
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="#">Home</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="tel:1-617-968-4000"><%= fa_icon "phone", id: "phone" %>1-617-968-4000</a></li>
       </ul>
     </div>
     <!--.nav-collapse -->
