@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/tristanperalta/galleria-rails.git
+  revision: d5bb8994344b3db7bb4e5d319db3f6302cca9a09
+  specs:
+    galleria-rails (0.0.1)
+      jquery-rails
+      railties (>= 3.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -164,6 +172,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.6)
   byebug
   coffee-rails (~> 4.1.0)
+  galleria-rails!
   jbuilder (~> 2.0)
   jquery-rails
   puma

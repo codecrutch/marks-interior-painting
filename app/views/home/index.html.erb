@@ -1,1 +1,19 @@
 <%= image_tag("mip_logo.jpg", size: '900x200', class: 'img-responsive') %>
+
+<div class="galleria img-responsive" id="gallery">
+  <%= image_tag("mip1.jpg", :title => "Painting a Ceiling", :alt => "Mark and Mike paint a ceiling") %>
+  <%= image_tag("mip2.jpg", title: "MIP2") %>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  $('.galleria').galleria({
+  });
+  Galleria.configure({
+    theme: 'classic',
+    imageCrop: true,
+    autoplay: 2500,
+    lightbox: true,
+    responsive: true
+  });
+  Galleria.run('.galleria');
+</script>

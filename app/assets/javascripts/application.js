@@ -14,4 +14,28 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require galleria-1.4.2.min
+//= require galleria.classic
 //= require_tree .
+
+
+$(window).load(function() {
+  resizeGalleria();
+});
+$(window).resize(function() {
+  resizeGalleria();
+});
+
+resizeGalleria = function() {
+  var g = $('.galleria');
+  var offset = 30;
+
+  var screenWidth = $(window).width();
+
+  if(screenWidth <= 760) {
+    g.height(screenWidth * 0.65);
+  } else {
+    g.height(532);
+    console.log(g.width());
+  }
+}

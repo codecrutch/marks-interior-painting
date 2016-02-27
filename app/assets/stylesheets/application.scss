@@ -10,12 +10,13 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require galleria.classic
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 body {
-  padding-top: 50px;
+  padding-top: 90px;
   font-family: Lobster;
 }
 
@@ -28,8 +29,18 @@ body {
   font-weight: bold;
 }
 
-.navbar-brand {
-  margin-top: -15px;
-  margin-bottom: 5px;
+.galleria {
+  width: 900px;
+  height: 532px;
+  text-align: center;
 }
+@media screen and (min-width: 481px) {
+  .navbar-nav {
+    float: right;
+  }
+}
+
+@media screen and (max-width: 480px) {
+}
+
 
