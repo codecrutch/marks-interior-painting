@@ -17,11 +17,22 @@
 @import "font-awesome";
 
 body {
-  padding-top: 90px;
+  background-color: #E7853F;
+  padding-top: 50px;
   font-family: Raleway;
 }
 
-#title {
+#tagline {
+  font-size: 1.60em;
+}
+
+#lead {
+  margin: 35px 0 0 0;
+}
+
+.title {
+  font-size: 4.9em;
+  letter-spacing: 3px;
 }
 
 #intro {
@@ -43,28 +54,26 @@ body {
   text-align: center;
 }
 
-.navbar-brand {
-  display: flex;
-  font-family: Lobster;
-  font-size: 1.1em;
-  letter-spacing: 3px;
+.galleria-frame {
+  background-color: red !important;
+}
+
+.navbar-inverse {
+  background-color: #CA651B;
 }
 
 .navbar .nav > li > a, .navbar .nav > li > a:first-letter,
 .navbar .nav > li.current-menu-item > a, 
 .navbar .nav > li.current-menu-ancestor > a {
-  font-size:      1.0em;
+  font-size:      1.6em;
 }
 
 .navbar-nav > li > a, .navbar-brand {
-  padding-top:5px !important;
+  font-family: 'Amatic SC', Raleway;
+  font-size: 3em;
   padding-bottom:0 !important;
   height: 30px;
   color: white !important;
-}
-
-.navbar {
-  min-height:30px !important;
 }
 
 .navbar-nav {
@@ -73,6 +82,31 @@ body {
 
 #phone {
   padding-right: 10px;
+}
+
+#page-backing {
+  background-color: white;
+}
+
+.services-bar, .gallery-bar, .testimonial-bar, .contact-bar {
+  color: white;
+  background-color: #448B9F;
+  margin-bottom: 20px;
+  padding: 2px;
+  border-radius: 10px;
+  h1 {
+    color: #FFA500;
+    font-family: 'Amatic SC', Raleway;
+    font-weight: bold;
+  }
+
+  p {
+    color: antiquewhite;
+  }
+}
+
+.scroll-buffer {
+  margin-bottom: 60px;
 }
 
 @media screen and (max-width: 767px) {

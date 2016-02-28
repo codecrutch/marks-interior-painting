@@ -1,43 +1,125 @@
-<div class="container center">
-  <%= image_tag("mip_logo.jpg", size: '1120x200', class: 'img-responsive') %>
+<div class="row" id='lead'>
+  <div class='col-xs-12 col-sm-12 col-md-6'> 
+    <%= image_tag("mip_logo.jpg", size: '920x200', class: 'img-responsive img-rounded center') %>
+  </div>
+  <div class='col-xs-12 col-sm-12 col-md-6'>
+    <p id='tagline'>Providing quality and affordable painting to Northeastern Massachusetts for <em>over 35</em> years!  <br /><br />Whether it be a wall or a mall, we'll paint it all!</p>
+  </div>
 </div>
 
 <div id="intro" class="container center">
-  <h1>About Us</h1>
-  <p>From a wall to a mall, we do it all.</p>
 </div>
-
-<div id="services" class="container center">
-  <h1>Services</h1>
-  <p>( Residential - Commercial - Industrial )</p>
-  <div class='col-xs-12 col-md-6 col-lg-4'>
-      <h3>Interior Painting</h3>
-      <p>All interior surfaces including walls, accent, ceilings, and trim.</p>
-      <h3>Exterior Painting</h3>
-      <p>Siding, trim, decks (including powerwashing).</p>
+<div id="services" class="scroll-buffer"> </div>
+<div class="center">
+  <div class="services-bar">
+    <h1 class='title'>Services</h1>
+    <p>( Residential - Commercial - Industrial )</p>
   </div>
-  <div class='col-xs-12 col-md-6 col-lg-4'>
-      <h3>Wall Cleaning</h3>
-      <p></p>
-      <h3>Wall Paper Removal</h3>
-      <p></p>
-      <h3>Wall and Ceiling Damage Repair</h3>
-      <p></p>
-  </div>
-  <div class='col-xs-12 col-md-6 col-lg-4'>
-      <h3>From a wall to a mall, we do it all.</h3>
+	<div class='row'>
+		<div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+			<div class="list-group">
+				<a href="#" class="list-group-item active">
+					Interior Painting
+				</a>
+				<a href="#" class="list-group-item">Walls</a>
+				<a href="#" class="list-group-item">Accents</a>
+				<a href="#" class="list-group-item">Ceilings</a>
+				<a href="#" class="list-group-item">Trim</a>
+			</div>
+		</div>
+		<div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+			<div class="list-group">
+				<a href="#" class="list-group-item active">
+					Exterior Painting
+				</a>
+				<a href="#" class="list-group-item">Siding</a>
+				<a href="#" class="list-group-item">Trim</a>
+				<a href="#" class="list-group-item">Decks (including powerwashing)</a>
+			</div>
+		</div>
+	</div>
+	<div class='row'>
+		<div class='col-xs-12 col-sm-6 col-md-6 col-lg-6'>
+			<div class="list-group">
+				<a href="#" class="list-group-item active">
+					Prep and Miscellaneous
+				</a>
+				<a href="#" class="list-group-item">Wall Cleaning</a>
+				<a href="#" class="list-group-item">Wall Paper Removal</a>
+				<a href="#" class="list-group-item">Wall/Ceiling Repair</a>
+			</div>
+		</div>
+		<div class='col-xs-12 col-sm-6 col-md-6 col-lg-6'>
+			<div class="list-group">
+				<a href="#" class="list-group-item active">Options</a>
+				<a href="#" class="list-group-item">Brush, Roller, or Spraying</a>
+				<a href="#" class="list-group-item">Night Painting Available</a>
+			</div>
+		</div>
+    <div class='col-xs-12 col-md-12 col-lg-4 jumbotron'>
+      <h3>From a wall to a mall, we do it all!</h3>
       <p>
-      <strong class='free-estimates'>Free Estimates!<br /></strong>
-      Brush, Roller, or Spraying options.<br />
-      Night painting available upon request.<br />
+      <strong id='estimate' class='free-estimates btn btn-success'>Free Estimates!<br /></strong>
       </p>
+    </div>
   </div>
 </div>
 
-<div class="galleria img-responsive center" id="gallery">
-  <%= image_tag("mip1.jpg", :title => "Painting a Ceiling", :alt => "Mark and Mike paint a ceiling") %>
-  <%= image_tag("mip2.jpg", title: "MIP2") %>
+<div id="testimonials" class="scroll-buffer"> </div>
+<div class="center">
+  <div class="testimonial-bar">
+    <h1 class='title'>Testimonials</h1>
+    <p>( What our customers are saying! )</p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 col-lg-6">
+        <blockquote>
+          <p>Mark did a great job painting my daughter's nursery! Mark is professional, affordable and does a wonderful job. I couldn't be happier with how the room turned out!</p>
+          <footer>Stephanie Brooks</footer>
+        </blockquote> 
+      </div>
+      <div class="col-xs-12 col-md-6 col-lg-6">
+        <blockquote>
+          <p>We have used Mark's Interior painting several times to do work on our home. Mark has always done a great job and is very fair and reasonable. We have recommended him our friends to do their places and they too were very pleased with my referral. Good work and customer satisfaction is what it all about and how you build a great service business! Mark hits all the 'Marks' for a 'Five Star' rating in my book!</p>
+          <footer>John M. Sullivan</footer>
+        </blockquote> 
+      </div>
+    </div>
+  </div>
 </div>
+
+<div id="gallery" class="scroll-buffer"> </div>
+<div class="center">
+  <div class="gallery-bar">
+    <h1 class='title'>Gallery</h1>
+    <p>( Recently Completed Work )</p>
+  </div> 
+  <div class="galleria img-responsive center"> 
+    <%= image_tag("mip1.jpg", :title => "Painting a Ceiling", :alt => "Mark and Mike paint a ceiling") %>
+    <%= image_tag("mip2.jpg", title: "MIP2") %>
+  </div>
+</div>
+
+<div class="scroll-buffer" id="contact"> </div>
+<div class="center">
+  <div class="contact-bar">
+    <h1 class='title'>Contact Us</h1>
+    <p>( Call for a free consultation and estimate! )</p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 col-lg-6">
+          <p>Please give us a call at <a href="tel:1-617-968-4000"><%= fa_icon "phone" %>&nbsp1-617-968-4000</a> to schedule a free consultation and estimate.</p>
+          <footer>Mark Centola</footer>
+      </div>
+      <div class="col-xs-12 col-md-6 col-lg-6">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <script type="text/javascript" charset="utf-8">
   $('.galleria').galleria({
@@ -47,7 +129,13 @@
     imageCrop: true,
     autoplay: 2500,
     lightbox: true,
-    responsive: true
+    responsive: true,
+    transition: 'fade',
+    transitionSpeed: 500,
+    thumbCrop: 'height',
+    idleMode: 'hover',
+    idleSpeed: 500,
+    fullscreenTransition: true
   });
   Galleria.run('.galleria');
 </script>

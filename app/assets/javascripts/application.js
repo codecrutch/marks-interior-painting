@@ -16,6 +16,7 @@
 //= require bootstrap-sprockets
 //= require galleria-1.4.2.min
 //= require galleria.classic
+//= require jquery-scrollto
 //= require_tree .
 
 
@@ -36,6 +37,33 @@ resizeGalleria = function() {
     g.height(screenWidth * 0.65);
   } else {
     g.height(532);
-    console.log(g.width());
   }
 }
+
+$(document).ready(function() {
+  $('#test').on("click",function(e){
+    e.preventDefault();
+    $('#testimonials').ScrollTo();
+  })
+  $('#serv').on("click",function(e){
+    e.preventDefault();
+    $('#services').ScrollTo();
+  })
+  $('#gall').on("click",function(e){
+    e.preventDefault();
+    $('#gallery').ScrollTo();
+  })
+  $('#cont').on("click",function(e){
+    e.preventDefault();
+    $('#contact').ScrollTo();
+  })
+  $('#estimate').on("click",function(e){
+    e.preventDefault();
+    $('#contact').ScrollTo();
+  })
+  $('.nav a').on('click', function(){
+        $('.btn-navbar').click(); //bootstrap 2.x
+            $('.navbar-toggle').click() //bootstrap 3.x by Richard
+  });
+});
+
