@@ -61,9 +61,30 @@ $(document).ready(function() {
     e.preventDefault();
     $('#contact').ScrollTo();
   })
-  $('.nav a').on('click', function(){
-        $('.btn-navbar').click(); //bootstrap 2.x
-            $('.navbar-toggle').click() //bootstrap 3.x by Richard
+  $('#ftr-phone').hover(function(){
+    $('#ftr-phone i').addClass('hover-phone');
+  },
+  function(){
+    $('#ftr-phone i').removeClass('hover-phone');
+  });
+  $('#ftr-email').hover(function(){
+    $('#ftr-email i').addClass('hover-email');
+  },
+  function(){
+    $('#ftr-email i').removeClass('hover-email');
+  });
+  $('#ftr-facebook').hover(function(){
+    $('#ftr-facebook i').addClass('hover-facebook');
+  },
+  function(){
+    $('#ftr-facebook i').removeClass('hover-facebook');
+  });
+  $(document).on("mousemove",function(){
+    if($('.navbar-collapse').attr('aria-expanded') == 'true') {
+      $('.nav a').on('click', function(){
+        $('.navbar-toggle').click();
+      });
+    }
   });
 });
 

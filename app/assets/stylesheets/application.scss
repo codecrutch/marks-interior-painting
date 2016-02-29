@@ -12,11 +12,18 @@
  *
  *= require galleria.classic
  */
-@import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
 
+$facebook: #3b5998;
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
+  margin-bottom: 150px;
   background-color: #E7853F;
   padding-top: 50px;
   font-family: Raleway;
@@ -24,10 +31,55 @@ body {
 
 #tagline {
   font-size: 1.60em;
+  text-indent: 2em;
 }
 
 #lead {
-  margin: 35px 0 0 0;
+  .col-xs-12 {
+    margin-top: 20px;
+  }
+}
+
+#motto {
+  font-size: 1.5em;
+  margin-top: 30px;
+  font-style: italic;
+}
+
+.footer {
+  border-top: 1px solid black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 150px;
+  background-color: #7C7063;
+}
+
+.footer-list {
+  text-align: center;
+  margin-top: 20px;
+  list-style: none;
+  li {
+    display: inline;
+    margin: 0 20px 20px 0;
+    a {
+     text-decoration: none;
+     color: inherit;
+   }
+  }
+}
+
+.hover-facebook {
+  color: $facebook;
+}
+
+.hover-email {
+  color: white;
+}
+
+.hover-phone {
+  color: darkred;
 }
 
 .title {
@@ -46,6 +98,10 @@ body {
 .free-estimates {
   color: green;
   font-size: 2em;
+}
+
+blockquote p.first {
+  text-indent: 5em;
 }
 
 .galleria {
