@@ -8,6 +8,6 @@
     <p>Please contact <a href="mailto:snyder@marksinteriorpainting.com?subject=Admin">Sean Snyder</a> for Admin access.</p>
     <%= link_to "Logout", logout_path %>
   <% else %>
-    <p><%= link_to('Login', new_admin_session_path) %></p>
+    <p><%= link_to('Login', login_path ) %></p>
   <% end %>
 <% end %>
