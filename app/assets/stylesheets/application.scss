@@ -75,6 +75,16 @@ body {
   }
 }
 
+#ftr-sign-in {
+  margin-top: 90px;
+  a, a:link, a:hover, a:focus, a:visited {
+    color: white;
+    float: right;
+    text-decoration: none;
+    font-size: 1em;
+  }
+}
+
 .hover-facebook {
   color: $facebook;
 }

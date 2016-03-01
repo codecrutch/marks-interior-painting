@@ -73,13 +73,18 @@
 <footer class="footer">
   <div class="container">
     <div class="row">
-      <div class='col-md-12'>
+      <div class="col-md-4">
+      </div>
+      <div class='col-md-4'>
         <ol class='footer-list'>
           <li id='ftr-facebook'><a href='https://www.facebook.com/marksinteriorpainting/' target='_blank'><%= fa_icon "facebook 2x" %></a></li>
           <li id='ftr-email'><a href='mailto:markcentola@marksinteriorpainting.com'><%= fa_icon "envelope-o 2x" %></a></li>
           <li id='ftr-phone'><a href='tel:1-678-968-4900'><%= fa_icon "phone 2x" %></a></li>
         </ol>
         <p class='center' id='created-by'>Created by <a href="http://www.snyder-dev.com" target="_blank">Sean Snyder</a></p>
+      </div>
+      <div class="col-md-4" id='ftr-sign-in'>
+        <a href="<%= login_path %>">Sign in <%= fa_icon 'user' %></a>
       </div>
     </div>
   </div>
