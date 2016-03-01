@@ -17,7 +17,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-rails'
 # gem 'galleria-rails', github: 'tristanperalta/galleria-rails'
-gem 'rails-gallery'
 gem 'browser'
 
 group :development, :test do
