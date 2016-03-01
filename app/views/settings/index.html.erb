@@ -1,0 +1,9 @@
+<% if current_admin.try(:admin?) %>
+  <h1>Settings</h1>
+
+  <p>This is will be an overview to add/edit/delete testimonials and pictures.</p>
+<% else %>
+  <p><%= link_to('Login', new_admin_session_path) %></p>
+  <p>Or</p>
+  <p>Please contact <a href="mailto:snyder@marksinteriorpainting.com?subject=Admin">Sean Snyder</a> for Admin access.</p>
+<% end %>

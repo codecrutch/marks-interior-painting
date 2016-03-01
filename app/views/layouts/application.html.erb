@@ -2,8 +2,8 @@
 <html>
   <head>
     <title>Mark's Interior Painting</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
@@ -40,18 +40,23 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Mark's Interior Painting</a>
+      <%= link_to "Mark's Interior Painting", root_path, class: 'navbar-brand' %>
     </div>
 
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a id='serv' href="#services">Services</a></li>
-        <li><a id='test' href="#testimonials">Testimonials</a></li>
-        <li><a id='gall' href="#gallery">Gallery</a></li>
-        <% if browser.mobile? %>
-          <li><a href="tel:1-617-968-4000"><%= fa_icon "phone", id: "phone" %>&nbsp;1-617-968-4000</a></li>
+        <% if current_admin.try(:admin?) %>
+          <li><%= link_to "Settings", settings_path %></li>
+          <li><%= link_to "Logout", logout_path %></li>
         <% else %>
-          <li><a id='cont' href="#contact">Contact Us</a></li>
+          <li><a id='serv' href="#services">Services</a></li>
+          <li><a id='test' href="#testimonials">Testimonials</a></li>
+          <li><a id='gall' href="#gallery">Gallery</a></li>
+          <% if browser.mobile? %>
+            <li><a href="tel:1-617-968-4000"><%= fa_icon "phone", id: "phone" %>&nbsp;1-617-968-4000</a></li>
+          <% else %>
+            <li><a id='cont' href="#contact">Contact Us</a></li>
+          <% end %>
         <% end %>
       </ul>
     </div>
@@ -60,6 +65,8 @@
 </nav>
 
 <div class='container' id="page-backing">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
   <%= yield %>
 </div>
 
