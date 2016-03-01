@@ -13,6 +13,9 @@
  *= require_tree .
  */
 
+$list-group-active-color: lighten(yellow, 40%);
+$list-group-active-bg: #96A658;
+
 @import "bootstrap";
 @import "font-awesome";
 
@@ -60,10 +63,11 @@ body {
 .footer-list {
   text-align: center;
   margin-top: 60px;
+  margin-right: 45px;
   list-style: none;
   li {
     display: inline;
-    margin: 0 20px 20px 0;
+    padding: 15px;
     a {
      text-decoration: none;
      color: inherit;
@@ -96,8 +100,12 @@ body {
   text-align: center;
 }
 
+.free-estimate-bar {
+  padding-top: 10px;
+}
+
 .free-estimates {
-  color: green;
+  color: white;
   font-size: 2em;
 }
 
@@ -173,4 +181,10 @@ blockquote p.first {
   }
 }
 
-
+#created-by {
+  margin-top: 25px;
+  a, a:hover, a:active, a:visited, a:focus {
+    text-decoration: inherit;
+    color: inherit;
+  }
+}
