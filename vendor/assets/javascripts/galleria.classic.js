@@ -37,7 +37,7 @@ Galleria.addTheme({
             touch = Galleria.TOUCH;
 
         // show loader & counter with opacity
-        this.$('loader,counter').show().css('opacity', 0.4);
+        this.$('loader,counter').show().css('opacity', 0.6);
 
         // some stuff for non-touch browsers
         if (! touch ) {
