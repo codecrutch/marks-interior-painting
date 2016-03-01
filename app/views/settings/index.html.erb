@@ -3,7 +3,11 @@
 
   <p>This is will be an overview to add/edit/delete testimonials and pictures.</p>
 <% else %>
-  <p><%= link_to('Login', new_admin_session_path) %></p>
-  <p>Or</p>
-  <p>Please contact <a href="mailto:snyder@marksinteriorpainting.com?subject=Admin">Sean Snyder</a> for Admin access.</p>
+  <% if current_admin %>
+    <p>You are logged in but have no adminstrative rights.</p>
+    <p>Please contact <a href="mailto:snyder@marksinteriorpainting.com?subject=Admin">Sean Snyder</a> for Admin access.</p>
+    <%= link_to "Logout", logout_path %>
+  <% else %>
+    <p><%= link_to('Login', new_admin_session_path) %></p>
+  <% end %>
 <% end %>
