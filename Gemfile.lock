@@ -1,11 +1,3 @@
-GIT
-  remote: git://github.com/tristanperalta/galleria-rails.git
-  revision: d5bb8994344b3db7bb4e5d319db3f6302cca9a09
-  specs:
-    galleria-rails (0.0.1)
-      jquery-rails
-      railties (>= 3.2.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -72,6 +64,7 @@ GEM
       railties (>= 3.2, < 5.1)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    hashie (3.4.3)
     i18n (0.7.0)
     jbuilder (2.4.0)
       activesupport (>= 3.0.0, < 5.1)
@@ -113,6 +106,9 @@ GEM
       activesupport (>= 4.2.0.beta, < 5.0)
       nokogiri (~> 1.6.0)
       rails-deprecated_sanitizer (>= 1.0.1)
+    rails-gallery (0.3.3)
+      hashie (>= 2.0.0)
+      rails (>= 3.1)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
     rails_12factor (0.0.3)
@@ -183,12 +179,12 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   font-awesome-rails
-  galleria-rails!
   jbuilder (~> 2.0)
   jquery-rails
   pg
   puma
   rails (= 4.2.5)
+  rails-gallery
   rails_12factor
   rspec
   sass-rails (~> 5.0)
