@@ -1,0 +1,14 @@
+<h1>Photos#index</h1>
+<p>Find me in app/views/photos/index.html.erb</p>
+<%= link_to "Add Photo", new_photo_path %>
+
+<h2>Current Photos</h2>
+
+<div class="row">
+
+<% @photos.each do |photo| %>
+<div class="col-md-2">
+  <%= image_tag photo.image.url(:thumb), class: 'img-thumbnail img-responsive' %>
+</div>
+<% end %>
+</div>

@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="container">
+    <div class="col-md-6" id='edit_photo_form'>
+      <h1>Edit Photo</h1>
+      <%= render 'form' %>
+    </div>
+
+    <div class="col-md-4">
+      <p>Current Photo:
+      <%= image_tag @photo.image.url(:large), class: 'img-thumbnail' %>
+      </p>
+    </div>
+  </div>
+</div>

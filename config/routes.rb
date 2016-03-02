@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'photos/index'
+
   devise_for :admins
   as :admin do
     get "/login" => "devise/sessions#new"
@@ -12,6 +14,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home#index'
+
+  resources :photos
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
