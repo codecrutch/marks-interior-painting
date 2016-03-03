@@ -1,21 +1,7 @@
-<%= form_for @photo do |f| %>
-  <p>
-  <%= f.label :name %>:
-  <%= f.text_field :name %>
-  </p>
-
-  <p>
-  <%= f.label :description %>:
-  <%= f.text_field :description %><br>
-  </p>
-
-  <br />
-
-  <p>
-  <%= f.label :image %>:
-  <%= f.file_field :image %>
-  </p>
-
-  <br />
-  <p><%= f.submit "Submit", class: 'btn btn-primary' %> </p>
+<%= simple_form_for @photo do |f| %>
+  <%= f.input :title, placeholder: "Fresh Paint!" %>
+  <%= f.input :description, placeholder: "Love the smell of fresh new paint on the walls!" %>
+  <%= f.input :image %>
+  <%= f.button :submit %>
 <% end %>
+<p></p>

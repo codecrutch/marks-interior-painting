@@ -1,7 +1,8 @@
 <% if current_admin.try(:admin?) %>
   <h1>Settings</h1>
 
-  <p>This is will be an overview to add/edit/delete testimonials and pictures.</p>
+  <p><%= link_to "Photos", photos_path, class: 'btn btn-primary' %></p>
+  <p>Testimonials</p>
 <% else %>
   <% if current_admin %>
     <p>You are logged in but have no adminstrative rights.</p>

@@ -1,0 +1,119 @@
+footer{
+  float: left;
+  padding:15px 0;
+  min-width:100%;
+  bottom: 0;
+}
+
+@media (max-height:800px){
+  footer { position: static; }
+  header { padding-top:40px; }
+}
+
+.footer-distributed{
+  background: #7C7063;
+  border-top: 1px solid black;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 3em 'Amatic SC';
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+  width: 33%;
+}
+
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+  width: 33%;
+  text-align: center;
+}
+
+.footer-distributed .footer-center a:link,
+.footer-distributed .footer-center a:active,
+.footer-distributed .footer-center a:focus,
+.footer-distributed .footer-center a:visited,
+.footer-distributed .footer-center a:hover{
+  color: black;
+}
+
+.footer-distributed .footer-center i{
+  background-color: #B58963;
+  font-size: 28px;
+  width: 42px;
+  height: 42px;
+  border-radius: 60%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+}
+
+.footer-distributed .footer-center .footer-icons li{
+  display: inline;
+  cursor: pointer;
+  margin-left: -30px;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+  width: 30%;
+  text-align: right;
+}
+
+/* Footer links */
+
+.footer-distributed a{
+  line-height: 1.0em;
+  text-decoration: none;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+  .footer-distributed{
+    font: bold 3em 'Amatic SC';
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i{
+    margin-left: 0;
+  }
+.footer-distributed .footer-center .footer-icons li{
+  display: inline;
+  cursor: pointer;
+  margin-left: -12px;
+}
+
+
+}
+
+.footer-distributed #created-by {
+  font-size: 0.4em;
+  a, a:hover, a:active, a:visited, a:focus {
+    text-decoration: inherit;
+    color: inherit;
+  }
+}

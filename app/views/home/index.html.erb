@@ -92,8 +92,13 @@
     <p>( Recently Completed Work )</p>
   </div> 
   <div class="galleria img-responsive center"> 
-    <%= image_tag("mip1.jpg", :title => "Painting a Ceiling", :alt => "Mark and Mike paint a ceiling") %>
-    <%= image_tag("mip2.jpg", title: "MIP2") %>
+    <% if @photos.empty? %>
+      <strong>Please add photos for the gallery.</strong>
+    <% else %>
+      <% @photos.each do |p| %>
+        <%= image_tag p.image.url(:normal), title: p.title, alt: p.description %>
+      <% end %>
+    <% end %>
   </div>
 </div>
 
@@ -106,7 +111,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <p>Please give us a call at <a href="tel:1-617-968-4000"><%= fa_icon "phone" %>&nbsp;1-617-968-4000</a> to schedule a free consultation and estimate.</p>
+        <p id='call-us'>Please give us a call at <a href="tel:1-617-968-4000"><%= fa_icon "phone" %>&nbsp;1-617-968-4000</a> to schedule a free consultation and estimate.</p>
       </div>
     </div>
   </div>
@@ -122,8 +127,8 @@ Galleria.configure({
   autoplay: 2500,
   lightbox: true,
   responsive: true,
-  transition: 'fade',
-  transitionSpeed: 500,
+  transition: 'pan',
+  transitionSpeed: 800,
   thumbCrop: 'height',
   idleMode: 'hover',
   idleSpeed: 500,

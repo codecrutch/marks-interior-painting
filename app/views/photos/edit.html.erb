@@ -1,14 +1,14 @@
 <div class="row">
   <div class="container">
-    <div class="col-md-6" id='edit_photo_form'>
+    <div class="col-xs-3 col-sm-3 col-md-3">
+      <p>Current Photo</p>
+      <%= image_tag @photo.image.url(:small), class: 'img-thumbnail' %>
+    </div>
+    <div class="col-xs-7 col-sm-6 col-md-6" id='edit_photo_form'>
       <h1>Edit Photo</h1>
       <%= render 'form' %>
+      <%= link_to "Cancel Edit", photos_path, class: 'btn btn-danger', id: 'cancel-photo-edit' %>
     </div>
 
-    <div class="col-md-4">
-      <p>Current Photo:
-      <%= image_tag @photo.image.url(:large), class: 'img-thumbnail' %>
-      </p>
-    </div>
   </div>
 </div>

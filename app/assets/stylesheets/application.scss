@@ -27,7 +27,6 @@ html {
 }
 
 body {
-  margin-bottom: 150px;
   background-color: #E7853F;
   padding-top: 50px;
   font-family: Raleway;
@@ -48,41 +47,6 @@ body {
   font-size: 1.5em;
   margin-top: 30px;
   font-style: italic;
-}
-
-.footer {
-  border-top: 1px solid black;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 150px;
-  background-color: #7C7063;
-}
-
-.footer-list {
-  text-align: center;
-  margin-top: 60px;
-  margin-right: 45px;
-  list-style: none;
-  li {
-    display: inline;
-    padding: 15px;
-    a {
-     text-decoration: none;
-     color: inherit;
-   }
-  }
-}
-
-#ftr-sign-in {
-  margin-top: 90px;
-  a, a:link, a:hover, a:focus, a:visited {
-    color: white;
-    float: right;
-    text-decoration: none;
-    font-size: 1em;
-  }
 }
 
 .hover-facebook {
@@ -163,6 +127,10 @@ blockquote p.first {
   background-color: white;
 }
 
+#call-us {
+  font-size: 1.4em;
+}
+
 .services-bar, .gallery-bar, .testimonial-bar, .contact-bar {
   color: white;
   background-color: #448B9F;
@@ -187,18 +155,7 @@ blockquote p.first {
 
 @media screen and (max-width: 767px) {
   .navbar-nav {
-    float: left;
+   float: left;
   }
 }
 
-#created-by {
-  margin-top: 25px;
-  a, a:hover, a:active, a:visited, a:focus {
-    text-decoration: inherit;
-    color: inherit;
-  }
-}
-
-#edit_photo_form {
-  margin: -20px 0 0 50px;
-}

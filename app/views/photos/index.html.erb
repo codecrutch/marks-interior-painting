@@ -1,14 +1,10 @@
-<h1>Photos#index</h1>
-<p>Find me in app/views/photos/index.html.erb</p>
-<%= link_to "Add Photo", new_photo_path %>
+<h3>All Photos</h3>
+<%= link_to fa_stacked_icon("plus", base: "square-o") + " Add Photo", new_photo_path %>
 
-<h2>Current Photos</h2>
-
-<div class="row">
-
-<% @photos.each do |photo| %>
-<div class="col-md-2">
-  <%= image_tag photo.image.url(:thumb), class: 'img-thumbnail img-responsive' %>
-</div>
-<% end %>
+<div class="row well" id="all-photos">
+  <% @photos.each do |photo| %>
+    <div class="col-xs-4 col-md-2" id="each-photo">
+      <a href='<%= photo_path(photo) %>' alt='<%= photo.title %>'><%= image_tag photo.image.url(:thumb), class: 'img-thumbnail img-responsive' %></a>
+    </div>
+  <% end %>
 </div>

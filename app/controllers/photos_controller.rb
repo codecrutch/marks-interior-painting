@@ -11,7 +11,12 @@ class PhotosController < ApplicationController
 
   def create
     @photo = Photo.create(photo_params)
-    redirect_to @photo
+    if @photo.save
+      redirect_to @photo
+    else
+      render :new
+      flash[:notice] = "You have errors."
+    end
   end
 
   def show
@@ -39,6 +44,6 @@ class PhotosController < ApplicationController
   end
 
   def photo_params
-    params.require(:photo).permit(:name, :description, :image)
+    params.require(:photo).permit(:title, :description, :image)
   end
 end

@@ -1,15 +1,17 @@
 <div class="center">
   <p>
-  <%= image_tag @photo.image.url(:thumb) %>
+  <%= image_tag @photo.image.url(:small), class: 'img-responsive img-thumbnail', alt: @photo.title %>
   </p>
 
-  <p class='jumbotron'>
-  <%= @photo.name %>
-  <%= @photo.description %>
-  </p>
+  <div class='jumbotron'>
+    <%= @photo.title %>
+    <br />
+    <%= @photo.description %>
+  </div>
 
   <p>
-  <%= link_to "Edit Photo", edit_photo_path, class: "btn btn-primary" %>
-  <%= link_to "Delete Photo", @photo, method: :delete, data: { confirm: "Are you sure" }, class: 'btn btn-primary' %>
+  <%= link_to fa_icon('arrow-circle-o-left') + " All Photos", photos_path, class: 'btn btn-primary' %>
+  <%= link_to "Edit Photo", edit_photo_path, class: "btn btn-info" %>
+  <%= link_to "Delete Photo", @photo, method: :delete, data: { confirm: "Are you sure" }, class: 'btn btn-danger' %>
   </p>
 </div>

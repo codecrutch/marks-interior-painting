@@ -40,6 +40,7 @@ resizeGalleria = function() {
 }
 
 $(document).ready(function() {
+  resizeGalleria();
   $('#test').on("click",function(e){
     e.preventDefault();
     $('#testimonials').ScrollTo();
