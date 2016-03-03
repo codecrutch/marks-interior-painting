@@ -70,26 +70,24 @@
   <%= yield %>
 </div>
 
-<footer class="footer-distributed">
-    <div class="footer-left">
+<footer class="navbar navbar-inverse navbar-fixed-bottom footer" role="navigation">
+  <div class="container">
+    <div class="navbar-btn"> 
+      <span class='navbar-text'>Find Us @</span>
     </div>
-    <div class='footer-center'>
-      <p>
-      <ol class='footer-icons'>
-        <li id='ftr-facebook'><a href='https://www.facebook.com/marksinteriorpainting/' target='_blank'><%= fa_icon "facebook 2x" %></a></li>
-        <li id='ftr-email'><a href='mailto:markcentola@marksinteriorpainting.com'><%= fa_icon "envelope-o 2x" %></a></li>
-        <li id='ftr-phone'><a href='tel:1-678-968-4900'><%= fa_icon "phone 2x" %></a></li>
-      </ol>
-      </p>
-      <a href="http://www.snyder-dev.com" id='created-by' target="_blank">Created by Sean Snyder</a>
+    <div class="navbar-text" id="footer-icons">
+      <span id='ftr-facebook'><a href='https://www.facebook.com/marksinteriorpainting/' target='_blank'><%= fa_icon "facebook 2x" %></a></span>
+      <span id='ftr-email'><a href='mailto:markcentola@marksinteriorpainting.com'><%= fa_icon "envelope-o 2x" %></a></span>
+      <span id='ftr-phone'><a href='tel:1-678-968-4900'><%= fa_icon "phone 2x" %></a></span>
     </div>
-    <div class="footer-right" id='ftr-sign-in'>
+    <div class="navbar-btn navbar-text pull-right">
       <% if admin_signed_in? %>
-        <a class='btn btn-primary' href="<%= settings_path %>">Settings <%= fa_icon 'cog' %></a>
+        <a href="<%= settings_path %>"><%= fa_icon 'cog 2x' %></a>
       <% else %>
         <a class='btn btn-primary' href="<%= login_path %>">Sign in <%= fa_icon 'user' %></a>
       <% end %>
     </div>
+  </div>
 </footer>
 </body>
 </html>
