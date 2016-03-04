@@ -4,7 +4,8 @@
 <div class="row well" id="all-testimonials">
   <% @testimonials.each do |t| %>
     <div class="col-xs-12">
-      <a href='<%= testimonial_path(t) %>' alt='<%= t.customer_name %>'><%= t.customer_name + "'s Testimonial" %></a>
+      <a href='<%= testimonial_path(t) %>' alt='<%= t.customer_name %>'><%= t.customer_name + " Testimonial" %></a>
     </div>
   <% end %>
 </div>
+<%= link_to "Back", settings_path, class: 'btn btn-primary' %>
