@@ -70,21 +70,17 @@
   <%= yield %>
 </div>
 
-<footer class="navbar navbar-inverse navbar-fixed-bottom footer" role="navigation">
-  <div class="container">
-    <div class="navbar-btn"> 
-      <span class='navbar-text'>Find Us @</span>
-    </div>
-    <div class="navbar-text" id="footer-icons">
+<footer class="navbar navbar-inverse navbar-fixed-bottom footer">
+  <div class="container navbar-footer">
+    <div class="" id="footer-icons">
+      <span class='text-antique'>Find Us <%= fa_icon 'at' %></span>
       <span id='ftr-facebook'><a href='https://www.facebook.com/marksinteriorpainting/' target='_blank'><%= fa_icon "facebook 2x" %></a></span>
       <span id='ftr-email'><a href='mailto:markcentola@marksinteriorpainting.com'><%= fa_icon "envelope-o 2x" %></a></span>
       <span id='ftr-phone'><a href='tel:1-678-968-4900'><%= fa_icon "phone 2x" %></a></span>
-    </div>
-    <div class="navbar-btn navbar-text pull-right">
       <% if admin_signed_in? %>
-        <a href="<%= settings_path %>"><%= fa_icon 'cog 2x' %></a>
+        <div class='navbar-right'><a href="<%= settings_path %>"><%= fa_icon 'cog 2x' %></a></div>
       <% else %>
-        <a class='btn btn-primary' href="<%= login_path %>">Sign in <%= fa_icon 'user' %></a>
+        <div class='navbar-right'><a class='btn btn-primary' href="<%= login_path %>">Sign in <%= fa_icon 'user' %></a></div>
       <% end %>
     </div>
   </div>

@@ -116,6 +116,24 @@ blockquote p.first {
   color: white !important;
 }
 
+.navbar-nav > li > a, .navbar-footer {
+  font-family: 'Amatic SC', Raleway;
+  color: white !important;
+  height: 30px;
+}
+
+@media (max-width: 768px) {
+  .navbar-fixed-bottom {
+    max-height: 70px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-fixed-bottom {
+    max-height: 70px;
+  }
+}
+
 .navbar-nav {
   float: right;
 }
@@ -159,15 +177,13 @@ blockquote p.first {
 
 @media screen and (max-width: 767px) {
   .navbar-nav {
-   float: left;
+    float: left;
   }
 }
 
 .footer {
   background: #7C7063 !important;
-  float: left;
-  padding:15px 0;
-  min-width:100%;
+  min-width: 100%;
   bottom: 0;
   a {
     color: white;
@@ -175,8 +191,21 @@ blockquote p.first {
   }
 }
 
-#footer-icons span a {
-  margin: 0px 20px 20px 20px;
-  padding-top: 20px !important;
+#footer-icons {
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  div {
+    display: inline;
+    margin-left: 60px;
+  }
 }
 
+#footer-icons span {
+  margin: 10px 10px 20px 20px;
+  text-align: center;
+}
+
+.text-antique {
+  color: antiquewhite !important;
+}
