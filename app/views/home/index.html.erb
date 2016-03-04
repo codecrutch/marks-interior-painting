@@ -70,18 +70,14 @@
   </div>
   <div class="container">
     <div class="row">
+      <% @testimonials.each do |t| %>
       <div class="col-xs-12 col-md-6 col-lg-6">
         <blockquote>
-          <p>Mark did a great job painting my daughter's nursery! Mark is professional, affordable and does a wonderful job. I couldn't be happier with how the room turned out!</p>
-          <footer>Stephanie Brooks</footer>
+          <p><%= t.content %></p>
+          <footer><%= t.customer_name %></footer>
         </blockquote> 
       </div>
-      <div class="col-xs-12 col-md-6 col-lg-6">
-        <blockquote>
-          <p>We have used Mark's Interior painting several times to do work on our home. Mark has always done a great job and is very fair and reasonable. We have recommended him our friends to do their places and they too were very pleased with my referral. Good work and customer satisfaction is what it all about and how you build a great service business! Mark hits all the 'Marks' for a 'Five Star' rating in my book!</p>
-          <footer>John M. Sullivan</footer>
-        </blockquote> 
-      </div>
+      <% end %>
     </div>
   </div>
 </div>

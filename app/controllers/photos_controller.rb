@@ -1,4 +1,5 @@
 class PhotosController < ApplicationController
+  before_filter :authenticate_admin!
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
 
   def index

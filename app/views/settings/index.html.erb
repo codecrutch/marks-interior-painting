@@ -3,7 +3,7 @@
   <p>You are logged in as: <strong><%= current_admin.email %></strong></p>
   <h1 class="jumbotron">Settings</h1>
   <p><%= link_to "Photos", photos_path, class: 'btn btn-primary' %></p>
-  <p>Testimonials</p>
+  <p><%= link_to "Testimonials", testimonials_path, class: 'btn btn-info' %></p>
 <% else %>
   <% if current_admin %>
     <p>You are logged in but have no adminstrative rights.</p>
