@@ -1,0 +1,10 @@
+<blockquote>
+  <p>
+  <span class="testimonial-content"><%= @testimonial.content %></span>
+  </p>
+  <footer><%= @testimonial.customer_name %></footer>
+</blockquote> 
+<%= link_to fa_icon('arrow-circle-o-left') + " All Testimonials", testimonials_path, class: 'btn btn-primary' %>
+<%= link_to "Edit Testimonials", edit_testimonial_path, class: "btn btn-info" %>
+<%= link_to "Delete Testimonial", @testimonial, method: :delete, data: { confirm: "Are you sure" }, class: 'btn btn-danger' %>
+</p>

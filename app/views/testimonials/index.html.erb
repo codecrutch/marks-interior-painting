@@ -1,0 +1,10 @@
+<h3>All Testimonials</h3>
+<%= link_to fa_stacked_icon("plus", base: "square-o") + " Add Testimonial", new_testimonial_path %>
+
+<div class="row well" id="all-testimonials">
+  <% @testimonials.each do |t| %>
+    <div class="col-xs-12">
+      <a href='<%= testimonial_path(t) %>' alt='<%= t.customer_name %>'><%= t.customer_name + "'s Testimonial" %></a>
+    </div>
+  <% end %>
+</div>
