@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'stringio'
 
 RSpec.describe Photo, type: :model do
   it 'has a valid factory' do
