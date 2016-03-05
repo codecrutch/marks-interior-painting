@@ -2,9 +2,6 @@ require 'rails_helper'
 require 'stringio'
 
 RSpec.describe Photo, type: :model do
-  before :each do
-    allow_any_instance_of(Paperclip::Attachment).to receive(:save).and_return(true)
-  end
   it 'has a valid factory' do
     expect(FactoryGirl.create(:photo)).to be_valid
   end
