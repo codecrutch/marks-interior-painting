@@ -84,4 +84,19 @@ Rails.application.configure do
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
+  config.action_mailer.default_url_options = { :host => 'www.marksinteriorpainting.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default :charset => "utf-8"
+
+  config.action_mailer.smtp_settings = {
+    address: "smtp.zoho.com",
+    port: 465,
+    domain: ENV["ZOHO_DOMAIN"],
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV["ZOHO_USERNAME"],
+    password: ENV["ZOHO_PASSWORD"]
+  }
 end
