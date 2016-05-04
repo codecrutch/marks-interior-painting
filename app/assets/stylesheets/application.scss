@@ -126,6 +126,10 @@ blockquote p.first {
   .navbar-fixed-bottom {
     max-height: 70px;
   }
+  #footer-icons .navbar-right {
+    margin: 0px 30px 30px 20px;
+    position: absolute;
+  }
 }
 
 @media (min-width: 768px) {
@@ -210,3 +214,5 @@ blockquote p.first {
   color: antiquewhite !important;
   font-size: 1.6em;
 }
+
+

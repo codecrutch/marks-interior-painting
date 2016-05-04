@@ -1,9 +1,26 @@
-<h1>Request a Free Estimate</h1>
-<%= simple_form_for @estimate do |f| %>
-  <%= f.input :customer_name %>
-  <%= f.input :contact %>
-  <p>
-  <%= f.input :inquiry, label: 'Service(s) Requested?' %>
-  </p>
-  <%= f.submit 'Send Request' %>
-<% end %>
+<div class="row">
+  <div class="col-sm-2">
+  </div>
+  <div class="col-sm-8">
+    <h1>Request a Free Estimate</h1>
+    <div class="jumbotron">
+      <%= simple_form_for(@estimate, html: { class: 'form-group text-left' }) do |f| %>
+        <%= f.input :customer_name, label: 'Full Name' %>
+        <%= f.input :contact, label: 'Phone or E-mail' %>
+        <p>
+          <%= f.input :inquiry, label: 'Service(s) Requested?', as: :text, :input_html => {:rows => 7} %>
+        </p>
+        <%= f.submit 'Send Request', class: 'btn btn-success' %>
+        <p></p>
+        <%= link_to "Cancel", root_path, class: 'btn btn-danger' %>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-sm-2">
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Thank you for your time!</h2>
+    </div>
+  </div>
+</div>
