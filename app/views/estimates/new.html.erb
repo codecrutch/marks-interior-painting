@@ -1,0 +1,9 @@
+<h1>Request a Free Estimate</h1>
+<%= simple_form_for @estimate do |f| %>
+  <%= f.input :customer_name %>
+  <%= f.input :contact %>
+  <p>
+  <%= f.input :inquiry, label: 'Service(s) Requested?' %>
+  </p>
+  <%= f.submit 'Send Request' %>
+<% end %>

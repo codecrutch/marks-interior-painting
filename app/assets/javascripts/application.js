@@ -57,10 +57,6 @@ $(document).ready(function() {
     e.preventDefault();
     $('#contact').ScrollTo();
   })
-  $('#estimate').on("click",function(e){
-    e.preventDefault();
-    $('#contact').ScrollTo();
-  })
   $('#ftr-phone').hover(function(){
     $('#ftr-phone i').addClass('hover-phone');
   },

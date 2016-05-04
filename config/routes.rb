@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  root 'home#index'
-  get 'home/index'
-  get '/settings' => "settings#index"
+  root "home#index"
+  get 'estimate', to: 'estimates#new', as: 'new_estimate'
+  resources :estimates, only: [:create]
+  get "/settings" => "settings#index"
 
   devise_for :admins
   as :admin do

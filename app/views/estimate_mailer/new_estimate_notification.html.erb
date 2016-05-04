@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Free Job Estimate Notification</h1>
+    <p></p>
+    <h2><%= @greeting %></h2>
+    <p></p>
+    <p></p>
+    <p></p>
+    <h3>Customer Information</h3>
+    <p> Customer Name: <%= @estimate.customer_name %> </p>
+    <p> Contact Information: <%= @estimate.contact %> </p>
+    <h3>Services Requested</h3>
+    <p> <%= @estimate.inquiry %> </p>
+    <p></p>
+    <h3>Submitted on <%= Time.now.strftime("%A, %d %b %Y %l:%M %p") %></h3>
+  </body>
+</html>
